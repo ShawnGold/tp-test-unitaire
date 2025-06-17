@@ -4,6 +4,8 @@
   "description": "Système de réservation de salles de réunion - TP BUFFET Evan",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
@@ -24,6 +26,7 @@
     "coverageDirectory": "coverage"
   },
   "dependencies": {
+    "express": "^4.21.2",
     "uuid": "^11.1.0"
   }
 }
