@@ -1,0 +1,29 @@
+{
+  "name": "tp-reservation-salles-buffet-evan",
+  "version": "1.0.0",
+  "description": "Système de réservation de salles de réunion - TP BUFFET Evan",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "author": "BUFFET Evan",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageDirectory": "coverage"
+  },
+  "dependencies": {
+    "uuid": "^11.1.0"
+  }
+}
