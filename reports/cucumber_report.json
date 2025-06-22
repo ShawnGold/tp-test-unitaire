@@ -1,0 +1,1873 @@
+[
+  {
+    "description": "  En tant qu'utilisateur\n  Je veux consulter les réservations\n  Afin de connaître la disponibilité des salles",
+    "elements": [
+      {
+        "description": "",
+        "id": "consultation-des-réservations;consulter-les-réservations-d'un-jour-donné",
+        "keyword": "Scénario",
+        "line": 12,
+        "name": "Consulter les réservations d'un jour donné",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 421958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 9,
+            "name": "une salle \"Salle A\" existe avec une capacité de 10 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 143958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 10,
+            "name": "une salle \"Salle B\" existe avec une capacité de 15 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37207
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné qu'",
+            "line": 13,
+            "name": "une réservation existe pour la salle \"Salle A\" du \"2025-06-25\" au \"2025-06-25\" de \"09:00\" à \"11:00\" pour 8 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 892291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 14,
+            "name": "une réservation existe pour la salle \"Salle B\" du \"2025-06-25\" au \"2025-06-25\" de \"14:00\" à \"16:00\" pour 12 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 100375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 15,
+            "name": "une réservation existe pour la salle \"Salle A\" du \"2025-06-26\" au \"2025-06-26\" de \"10:00\" à \"12:00\" pour 6 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 58875
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 16,
+            "name": "je consulte les réservations du \"2025-06-25\"",
+            "match": {
+              "location": "features/step_definitions/consultation_reservations_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62416
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 17,
+            "name": "je devrais voir 2 réservations",
+            "match": {
+              "location": "features/step_definitions/consultation_reservations_steps.js:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et ",
+            "line": 18,
+            "name": "les réservations devraient être triées par heure de début",
+            "match": {
+              "location": "features/step_definitions/consultation_reservations_steps.js:86"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 99541
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 31165
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "consultation-des-réservations;consulter-les-réservations-d'une-salle-spécifique",
+        "keyword": "Scénario",
+        "line": 20,
+        "name": "Consulter les réservations d'une salle spécifique",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 21792
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 9,
+            "name": "une salle \"Salle A\" existe avec une capacité de 10 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 10,
+            "name": "une salle \"Salle B\" existe avec une capacité de 15 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32832
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné qu'",
+            "line": 21,
+            "name": "une réservation existe pour la salle \"Salle A\" du \"2025-06-25\" au \"2025-06-25\" de \"09:00\" à \"11:00\" pour 8 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 103542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 22,
+            "name": "une réservation existe pour la salle \"Salle B\" du \"2025-06-25\" au \"2025-06-25\" de \"14:00\" à \"16:00\" pour 12 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 71167
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 23,
+            "name": "une réservation existe pour la salle \"Salle A\" du \"2025-06-26\" au \"2025-06-26\" de \"10:00\" à \"12:00\" pour 6 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 24,
+            "name": "je consulte les réservations de la salle \"Salle A\"",
+            "match": {
+              "location": "features/step_definitions/consultation_reservations_steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 81666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 25,
+            "name": "je devrais voir 2 réservations",
+            "match": {
+              "location": "features/step_definitions/consultation_reservations_steps.js:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30582
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et ",
+            "line": 26,
+            "name": "toutes les réservations devraient être pour la salle \"Salle A\"",
+            "match": {
+              "location": "features/step_definitions/consultation_reservations_steps.js:110"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59708
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 15125
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "consultation-des-réservations;consulter-les-réservations-d'un-jour-sans-réservation",
+        "keyword": "Scénario",
+        "line": 28,
+        "name": "Consulter les réservations d'un jour sans réservation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 15625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 9,
+            "name": "une salle \"Salle A\" existe avec une capacité de 10 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 10,
+            "name": "une salle \"Salle B\" existe avec une capacité de 15 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 761665
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 29,
+            "name": "je consulte les réservations du \"2025-12-25\"",
+            "match": {
+              "location": "features/step_definitions/consultation_reservations_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38957
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 30,
+            "name": "je devrais voir 0 réservations",
+            "match": {
+              "location": "features/step_definitions/consultation_reservations_steps.js:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26082
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 22458
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "consultation-des-réservations;consulter-les-réservations-d'une-salle-inexistante",
+        "keyword": "Scénario",
+        "line": 32,
+        "name": "Consulter les réservations d'une salle inexistante",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 16999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18167
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 9,
+            "name": "une salle \"Salle A\" existe avec une capacité de 10 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27582
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 10,
+            "name": "une salle \"Salle B\" existe avec une capacité de 15 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27416
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 33,
+            "name": "j'essaie de consulter les réservations de la salle \"Salle Inexistante\"",
+            "match": {
+              "location": "features/step_definitions/consultation_reservations_steps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 34,
+            "name": "je devrais voir 0 réservations",
+            "match": {
+              "location": "features/step_definitions/consultation_reservations_steps.js:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25125
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11790
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "consultation-des-réservations;vérifier-la-disponibilité-d'une-salle",
+        "keyword": "Scénario",
+        "line": 36,
+        "name": "Vérifier la disponibilité d'une salle",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 14624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 9,
+            "name": "une salle \"Salle A\" existe avec une capacité de 10 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 10,
+            "name": "une salle \"Salle B\" existe avec une capacité de 15 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné qu'",
+            "line": 37,
+            "name": "une réservation existe pour la salle \"Salle A\" du \"2025-06-25\" au \"2025-06-25\" de \"10:00\" à \"12:00\" pour 8 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 38,
+            "name": "je vérifie la disponibilité de la salle \"Salle A\" du \"2025-06-25\" au \"2025-06-25\" de \"09:00\" à \"11:00\"",
+            "match": {
+              "location": "features/step_definitions/consultation_reservations_steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 86000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 39,
+            "name": "la salle devrait être indisponible",
+            "match": {
+              "location": "features/step_definitions/consultation_reservations_steps.js:122"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44207
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 40,
+            "name": "je vérifie la disponibilité de la salle \"Salle A\" du \"2025-06-25\" au \"2025-06-25\" de \"13:00\" à \"15:00\"",
+            "match": {
+              "location": "features/step_definitions/consultation_reservations_steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 41,
+            "name": "la salle devrait être disponible",
+            "match": {
+              "location": "features/step_definitions/consultation_reservations_steps.js:122"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24291
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 72666
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "consultation-des-réservations",
+    "line": 2,
+    "keyword": "Fonctionnalité",
+    "name": "Consultation des réservations",
+    "tags": [],
+    "uri": "features/consultation_reservations.feature"
+  },
+  {
+    "description": "  En tant qu'administrateur\n  Je veux gérer les salles de réunion\n  Afin de pouvoir les proposer aux utilisateurs pour leurs réservations",
+    "elements": [
+      {
+        "description": "",
+        "id": "gestion-des-salles-de-réunion;ajouter-une-nouvelle-salle",
+        "keyword": "Scénario",
+        "line": 10,
+        "name": "Ajouter une nouvelle salle",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 17167
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 11,
+            "name": "j'ajoute une salle \"Salle Alpha\" avec une capacité de 12 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 12,
+            "name": "la salle \"Salle Alpha\" devrait être créée avec succès",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et ",
+            "line": 13,
+            "name": "la salle devrait avoir une capacité de 12 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27457
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et ",
+            "line": 14,
+            "name": "la salle devrait avoir un identifiant unique",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35915
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 15915
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gestion-des-salles-de-réunion;modifier-une-salle-existante",
+        "keyword": "Scénario",
+        "line": 16,
+        "name": "Modifier une salle existante",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 20958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné qu'",
+            "line": 17,
+            "name": "une salle \"Salle Beta\" existe avec une capacité de 8 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 18,
+            "name": "je modifie la salle \"Salle Beta\" pour avoir le nom \"Salle Beta Rénovée\" et une capacité de 15 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 19,
+            "name": "la salle devrait avoir le nom \"Salle Beta Rénovée\"",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et ",
+            "line": 20,
+            "name": "la salle devrait avoir une capacité de 15 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18082
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gestion-des-salles-de-réunion;supprimer-une-salle",
+        "keyword": "Scénario",
+        "line": 22,
+        "name": "Supprimer une salle",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11209
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12790
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné qu'",
+            "line": 23,
+            "name": "une salle \"Salle Gamma\" existe avec une capacité de 6 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 24,
+            "name": "une réservation existe pour cette salle",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 25,
+            "name": "je supprime la salle \"Salle Gamma\"",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50832
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 26,
+            "name": "la salle \"Salle Gamma\" ne devrait plus exister",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:97"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et ",
+            "line": 27,
+            "name": "toutes les réservations de cette salle devraient être supprimées",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39666
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10416
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gestion-des-salles-de-réunion;tentative-d'ajout-d'une-salle-invalide",
+        "keyword": "Scénario",
+        "line": 29,
+        "name": "Tentative d'ajout d'une salle invalide",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 81041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 30,
+            "name": "j'essaie d'ajouter une salle avec un nom vide",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 31,
+            "name": "une erreur \"Le nom de la salle est obligatoire\" devrait être levée",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:111"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34166
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9917
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gestion-des-salles-de-réunion;tentative-d'ajout-d'une-salle-avec-capacité-invalide",
+        "keyword": "Scénario",
+        "line": 33,
+        "name": "Tentative d'ajout d'une salle avec capacité invalide",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 12082
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46875
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 34,
+            "name": "j'essaie d'ajouter une salle \"Salle Test\" avec une capacité de 0 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 35,
+            "name": "une erreur \"La capacité doit être supérieure à 0\" devrait être levée",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:111"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11792
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "gestion-des-salles-de-réunion",
+    "line": 2,
+    "keyword": "Fonctionnalité",
+    "name": "Gestion des salles de réunion",
+    "tags": [],
+    "uri": "features/gestion_salles.feature"
+  },
+  {
+    "description": "  En tant qu'utilisateur\n  Je veux réserver une salle de réunion\n  Afin d'organiser mes réunions",
+    "elements": [
+      {
+        "description": "",
+        "id": "réservation-de-salles-de-réunion;réserver-une-salle-disponible",
+        "keyword": "Scénario",
+        "line": 12,
+        "name": "Réserver une salle disponible",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11042
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 9,
+            "name": "une salle \"Salle Conférence\" existe avec une capacité de 20 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23707
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 10,
+            "name": "une salle \"Salle Réunion\" existe avec une capacité de 8 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 13,
+            "name": "je réserve la salle \"Salle Conférence\" du \"2025-06-25\" au \"2025-06-25\" de \"09:00\" à \"11:00\" pour 15 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 121624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 14,
+            "name": "la réservation devrait être créée avec succès",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23042
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et ",
+            "line": 15,
+            "name": "la réservation devrait contenir les informations correctes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22832
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8166
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "réservation-de-salles-de-réunion;réserver-une-salle-sur-plusieurs-jours",
+        "keyword": "Scénario",
+        "line": 17,
+        "name": "Réserver une salle sur plusieurs jours",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10707
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 9,
+            "name": "une salle \"Salle Conférence\" existe avec une capacité de 20 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17332
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 10,
+            "name": "une salle \"Salle Réunion\" existe avec une capacité de 8 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15957
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 18,
+            "name": "je réserve la salle \"Salle Conférence\" du \"2025-06-25\" au \"2025-06-27\" de \"14:00\" à \"16:00\" pour 10 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 19,
+            "name": "la réservation devrait être créée avec succès",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et ",
+            "line": 20,
+            "name": "la durée de la réservation devrait être de 3 jours",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32667
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6957
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "réservation-de-salles-de-réunion;tentative-de-réservation-avec-dépassement-de-capacité",
+        "keyword": "Scénario",
+        "line": 22,
+        "name": "Tentative de réservation avec dépassement de capacité",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 15625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9792
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 9,
+            "name": "une salle \"Salle Conférence\" existe avec une capacité de 20 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 10,
+            "name": "une salle \"Salle Réunion\" existe avec une capacité de 8 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 23,
+            "name": "j'essaie de réserver la salle \"Salle Réunion\" du \"2025-06-25\" au \"2025-06-25\" de \"09:00\" à \"11:00\" pour 15 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 24,
+            "name": "une erreur \"La salle ne peut accueillir que 8 personnes maximum\" devrait être levée",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:111"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13832
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5583
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "réservation-de-salles-de-réunion;tentative-de-réservation-avec-horaires-invalides",
+        "keyword": "Scénario",
+        "line": 26,
+        "name": "Tentative de réservation avec horaires invalides",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 9,
+            "name": "une salle \"Salle Conférence\" existe avec une capacité de 20 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 10,
+            "name": "une salle \"Salle Réunion\" existe avec une capacité de 8 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13332
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 27,
+            "name": "j'essaie de réserver la salle \"Salle Conférence\" du \"2025-06-25\" au \"2025-06-25\" de \"11:00\" à \"09:00\" pour 10 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 28,
+            "name": "une erreur \"L'heure de début doit être antérieure à l'heure de fin\" devrait être levée",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:111"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "réservation-de-salles-de-réunion;tentative-de-réservation-avec-dates-invalides",
+        "keyword": "Scénario",
+        "line": 30,
+        "name": "Tentative de réservation avec dates invalides",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 9,
+            "name": "une salle \"Salle Conférence\" existe avec une capacité de 20 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13416
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 10,
+            "name": "une salle \"Salle Réunion\" existe avec une capacité de 8 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13290
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 31,
+            "name": "j'essaie de réserver la salle \"Salle Conférence\" du \"2025-06-27\" au \"2025-06-25\" de \"09:00\" à \"11:00\" pour 10 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 32,
+            "name": "une erreur \"La date de début doit être antérieure ou égale à la date de fin\" devrait être levée",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:111"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11957
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5875
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "réservation-de-salles-de-réunion;tentative-de-réservation-d'une-salle-déjà-occupée",
+        "keyword": "Scénario",
+        "line": 34,
+        "name": "Tentative de réservation d'une salle déjà occupée",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6082
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18040
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 9,
+            "name": "une salle \"Salle Conférence\" existe avec une capacité de 20 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17167
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 10,
+            "name": "une salle \"Salle Réunion\" existe avec une capacité de 8 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné qu'",
+            "line": 35,
+            "name": "une réservation existe pour la salle \"Salle Conférence\" du \"2025-06-25\" au \"2025-06-25\" de \"10:00\" à \"12:00\" pour 8 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 36,
+            "name": "j'essaie de réserver la salle \"Salle Conférence\" du \"2025-06-25\" au \"2025-06-25\" de \"11:00\" à \"13:00\" pour 5 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 69708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 37,
+            "name": "une erreur \"La salle est déjà réservée sur cette plage horaire\" devrait être levée",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:111"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12332
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7417
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "réservation-de-salles-de-réunion;réservation-de-salles-différentes-au-même-moment",
+        "keyword": "Scénario",
+        "line": 39,
+        "name": "Réservation de salles différentes au même moment",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8207
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 9,
+            "name": "une salle \"Salle Conférence\" existe avec une capacité de 20 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17875
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 10,
+            "name": "une salle \"Salle Réunion\" existe avec une capacité de 8 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné qu'",
+            "line": 40,
+            "name": "une réservation existe pour la salle \"Salle Conférence\" du \"2025-06-25\" au \"2025-06-25\" de \"10:00\" à \"12:00\" pour 8 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 41,
+            "name": "je réserve la salle \"Salle Réunion\" du \"2025-06-25\" au \"2025-06-25\" de \"11:00\" à \"13:00\" pour 6 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 42,
+            "name": "la réservation devrait être créée avec succès",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8082
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5290
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "réservation-de-salles-de-réunion;annuler-une-réservation",
+        "keyword": "Scénario",
+        "line": 44,
+        "name": "Annuler une réservation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7749
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné que ",
+            "line": 8,
+            "name": "le système de réservation est initialisé",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8415
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 9,
+            "name": "une salle \"Salle Conférence\" existe avec une capacité de 20 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et qu'",
+            "line": 10,
+            "name": "une salle \"Salle Réunion\" existe avec une capacité de 8 personnes",
+            "match": {
+              "location": "features/step_definitions/gestion_salles_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Étant donné qu'",
+            "line": 45,
+            "name": "une réservation existe pour la salle \"Salle Conférence\" du \"2025-06-25\" au \"2025-06-25\" de \"14:00\" à \"16:00\" pour 12 personnes",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35832
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quand ",
+            "line": 46,
+            "name": "je supprime cette réservation",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Alors ",
+            "line": 47,
+            "name": "la réservation ne devrait plus exister",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:76"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24167
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Et ",
+            "line": 48,
+            "name": "la salle devrait être disponible pour cette plage horaire",
+            "match": {
+              "location": "features/step_definitions/reservation_salles_steps.js:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36334
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6875
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "réservation-de-salles-de-réunion",
+    "line": 2,
+    "keyword": "Fonctionnalité",
+    "name": "Réservation de salles de réunion",
+    "tags": [],
+    "uri": "features/reservation_salles.feature"
+  }
+]

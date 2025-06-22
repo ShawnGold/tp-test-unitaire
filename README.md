@@ -1,12 +1,12 @@
-# Système de Réservation de Salles
+# TP Système de Réservation de Salles
 
 ## Description
 
-Application web de gestion des réservations de salles de réunion développée dans le cadre du TP sur les tests unitaires. Ce projet implémente une architecture en couches avec des tests complets utilisant Jest.
+Application web de gestion des réservations de salles de réunion développée dans le cadre du TP sur les tests unitaires. Ce TP implémente une architecture en couches avec des tests complets utilisant Jest et Cucumber.
 
 **Auteur :** BUFFET Evan
 
-## Architecture du Projet
+## Architecture du TP
 
 ### Structure des Dossiers
 
@@ -46,11 +46,11 @@ Application web de gestion des réservations de salles de réunion développée 
 - ✅ Filtrer les réservations par date ou par salle
 
 #### Interface Utilisateur
-- 🎨 Interface moderne et responsive
-- 📱 Compatible mobile et desktop
-- 🔔 Système de notifications en temps réel
-- 💾 Sauvegarde automatique en localStorage
-- 📊 Données de démonstration préchargées
+- Interface moderne et responsive
+- Compatible mobile et desktop
+- Système de notifications en temps réel
+- Sauvegarde automatique en localStorage
+- Données de démonstration préchargées
 
 ### Démarrage de l'Application
 
@@ -67,21 +67,35 @@ npm run dev
 
 L'application sera accessible sur `http://localhost:3000`
 
-## Tests Unitaires
+## Tests Unitaires et BDD
 
 ### Philosophie des Tests
 
-Ce projet implémente une approche TDD (Test-Driven Development) avec une couverture complète des fonctionnalités métier.
+Ce TP implémente une approche **hybride TDD/BDD** (Test-Driven Development / Behavior-Driven Development) avec une couverture complète des fonctionnalités métier :
+
+- **TDD avec Jest** : Tests unitaires classiques pour la logique métier
+- **BDD avec Cucumber** : Tests comportementaux en langage naturel pour les scénarios métier
 
 ### Structure des Tests
 
 ```
-tests/
+tests/                              # Tests unitaires (TDD)
 ├── models/
-│   ├── Salle.test.js         # Tests du modèle Salle
-│   └── Reservation.test.js   # Tests du modèle Reservation
+│   ├── Salle.test.js              # Tests du modèle Salle
+│   └── Reservation.test.js        # Tests du modèle Reservation
 └── services/
-    └── ReservationService.test.js  # Tests de la logique métier
+    └── ReservationService.test.js # Tests de la logique métier
+
+features/                          # Tests BDD (Cucumber)
+├── gestion_salles.feature         # Scénarios de gestion des salles
+├── reservation_salles.feature     # Scénarios de réservation
+├── consultation_reservations.feature # Scénarios de consultation
+├── step_definitions/              # Implémentation des étapes
+│   ├── gestion_salles_steps.js
+│   ├── reservation_salles_steps.js
+│   └── consultation_reservations_steps.js
+└── support/
+    └── world.js                   # Contexte partagé
 ```
 
 ### Types de Tests Implémentés
@@ -111,38 +125,44 @@ tests/
 - ✅ Filtrage par date et par salle
 - ✅ Gestion des erreurs métier (salle inexistante, capacité dépassée)
 
+#### Tests BDD (`features/`)
+
+**Tests comportementaux avec Cucumber** - Scénarios en langage naturel :
+
+**gestion_salles.feature** :
+- ✅ Ajouter une nouvelle salle avec validation
+- ✅ Modifier une salle existante
+- ✅ Supprimer une salle et ses réservations
+- ✅ Gestion des erreurs de validation
+
+**reservation_salles.feature** :
+- ✅ Réserver une salle disponible
+- ✅ Réservations sur plusieurs jours
+- ✅ Gestion des conflits horaires
+- ✅ Validation des capacités et horaires
+- ✅ Annulation de réservations
+
+**consultation_reservations.feature** :
+- ✅ Consultation par date et par salle
+- ✅ Tri automatique des résultats
+- ✅ Vérification de disponibilité
+- ✅ Gestion des cas limites
+
 ### Exécution des Tests
 
 ```bash
-# Lancer tous les tests
+# Tests unitaires (TDD)
 npm test
-
-# Mode watch (relance automatique)
 npm run test:watch
-
-# Génération du rapport de couverture
 npm run test:coverage
+
+# Tests BDD (Cucumber)
+npm run test:bdd
+npm run test:bdd:report  # Génère un rapport HTML
+
+# Tous les tests
+npm run test:all
 ```
-
-### Exemple de Sortie des Tests
-
-```bash
-PASS tests/models/Salle.test.js
-PASS tests/models/Reservation.test.js  
-PASS tests/services/ReservationService.test.js
-
-Test Suites: 3 passed, 3 total
-Tests:       25 passed, 25 total
-Coverage:    100% statements, 100% branches, 100% functions, 100% lines
-```
-
-### Couverture de Code
-
-Le projet vise une couverture de 100% avec Jest :
-- **Statements** : Toutes les instructions exécutées
-- **Branches** : Tous les chemins conditionnels testés  
-- **Functions** : Toutes les fonctions appelées
-- **Lines** : Toutes les lignes de code couvertes
 
 ## Technologies Utilisées
 
@@ -160,54 +180,6 @@ Le projet vise une couverture de 100% avec Jest :
 - **Jest** : Framework de tests unitaires
 - **Coverage** : Rapport de couverture de code
 
-## Règles Métier Implémentées
-
-### Validation des Salles
-- Le nom ne peut pas être vide
-- La capacité doit être un nombre positif
-- Chaque salle a un ID unique
-
-### Validation des Réservations
-- Les dates de début et fin doivent être cohérentes
-- Le format des heures doit être HH:MM (24h)
-- L'heure de début doit être antérieure à l'heure de fin
-- Le nombre de personnes ne peut pas dépasser la capacité de la salle
-- Aucune réservation ne peut chevaucher dans la même salle
-
-### Gestion des Conflits
-- Détection automatique des chevauchements temporels
-- Vérification de la disponibilité avant création
-- Suppression en cascade des réservations lors de la suppression d'une salle
-
-## Exemple d'Utilisation
-
-```javascript
-// Création d'une salle
-const service = new ReservationService();
-const salle = service.ajouterSalle('Salle de Formation', 20);
-
-// Création d'une réservation
-const reservation = service.creerReservation(
-  salle.id,
-  new Date('2025-06-25'),
-  new Date('2025-06-25'), 
-  '09:00',
-  '11:00',
-  15
-);
-
-// Consultation des réservations
-const reservationsDuJour = service.getReservationsParJour(new Date('2025-06-25'));
-```
-
-## Contribution
-
-1. Cloner le repository
-2. Installer les dépendances : `npm install`
-3. Lancer les tests : `npm test`
-4. Développer en TDD : écrire les tests avant le code
-5. Vérifier la couverture : `npm run test:coverage`
-
 ---
 
-*Projet réalisé dans le cadre du module CS2I/M1 - Tests Unitaires*
+*TP réalisé dans le cadre du module CS2I/M1 - Tests Unitaires*

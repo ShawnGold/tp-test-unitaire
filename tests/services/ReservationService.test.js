@@ -124,7 +124,7 @@ describe('ReservationService - Logique métier des réservations', () => {
         '09:00',
         '11:00',
         15 // Dépasse la capacité de 10
-      )).toThrow('Le nombre de personnes dépasse la capacité de la salle');
+      )).toThrow('La salle ne peut accueillir que 10 personnes maximum');
     });
 
     test('devrait lever une erreur si la salle est déjà réservée à ce créneau', () => {
@@ -146,7 +146,7 @@ describe('ReservationService - Logique métier des réservations', () => {
         '10:00',
         '12:00',
         3
-      )).toThrow('La salle est déjà réservée à ce créneau');
+      )).toThrow('La salle est déjà réservée sur cette plage horaire');
     });
 
     test('devrait permettre des réservations non chevauchantes dans la même salle', () => {

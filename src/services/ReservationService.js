@@ -56,7 +56,7 @@ class ReservationService {
 
     // Vérifier la capacité
     if (nombrePersonnes > salle.capacite) {
-      throw new Error('Le nombre de personnes dépasse la capacité de la salle');
+      throw new Error(`La salle ne peut accueillir que ${salle.capacite} personnes maximum`);
     }
 
     // Créer la réservation temporaire pour validation
@@ -68,7 +68,7 @@ class ReservationService {
     );
 
     if (conflit) {
-      throw new Error('La salle est déjà réservée à ce créneau');
+      throw new Error('La salle est déjà réservée sur cette plage horaire');
     }
 
     this.reservations.push(nouvelleReservation);
